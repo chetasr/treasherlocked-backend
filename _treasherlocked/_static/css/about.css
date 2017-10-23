@@ -1,0 +1,40 @@
+html,body{
+  margin-top: 45px;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
+
+.btn{
+  margin: 8px;
+}
+
+
+.jumbotron{
+  padding: 30px;
+}
+
+
+.foot{
+  color: gray;
+  padding-right: 5px;
+}
+
+.footer{
+  padding: 25px;
+  -moz-align-self: -moz-flex-end;
+  -webkit-align-self: -webkit-flex-end;
+  -ms-align-self: -ms-flex-end;
+  background: #252830;
+  text-align: center;
+
+
+
+
+}

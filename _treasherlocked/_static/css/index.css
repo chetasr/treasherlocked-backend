@@ -1,0 +1,102 @@
+html,body{
+  margin: 0;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+  color: white;
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+  background: black;
+}
+
+a:hover{
+  color: red;
+}
+
+.btn{
+  margin: 8px;
+}
+
+
+
+.first{
+  padding-top: 140px;
+  height: 100vh;
+  min-height: 400px;
+  background-image: url('../img/ts/bg.png');
+  background-size:cover;
+  background-position: right;
+
+}
+
+.hunt{
+  font-size:25px;
+  color:white;
+  margin: 15px;
+}
+
+.date{
+  font-size: 35px;
+  color: white;
+  margin: 50px;
+}
+
+hr{
+  position: relative;
+  border: 0;
+  height: 2px;
+  width: 20%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), red , rgba(0, 0, 0, 0));
+}
+
+.huntend{
+  text-align: center;
+  padding: 50px;
+  background: #F3F5F9;
+}
+
+.admin{
+  padding-top: 40px;
+  background: #25282F;
+}
+
+.social{
+  margin: 15px;
+  padding-right: 50px;
+
+}
+
+.rounded{
+  height: 125px;
+  width:125px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.adminname{
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+}
+
+.sponsor{
+  color: white;
+  text-align: center;
+  padding: 50px;
+  background: #363739;
+}
+
+.foot{
+  color: gray;
+  padding-right: 5px;
+}
+.footer{
+  padding: 25px;
+  -moz-align-self: -moz-flex-end;
+  -webkit-align-self: -webkit-flex-end;
+  -ms-align-self: -ms-flex-end;
+  background: #252830;
+  text-align: center;
+}

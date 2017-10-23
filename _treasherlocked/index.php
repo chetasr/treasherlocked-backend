@@ -24,186 +24,170 @@
 	else
 		$countdown = null;
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 
-	<link rel="shortcut icon" href="<?php echo SSTATIC; ?>favicon.png" type="image/png">
-	<link rel="icon" href="<?php echo SSTATIC; ?>favicon.png" type="image/png">
-
-	<title>Treasherlocked 4.0 by Microsoft Campus Club, NIT Rourkela - Treasure is locked, yet again!</title>
-
-	<meta name="description" content="Treasherlocked 4.0 is the third installment to a three-day online cryptic treasure hunt organized by Microsoft Campus Club of NIT Rourkela. It will be held between 6th November and 8th November, 2015." />
-	<meta name="keywords"  content="treasherlocked, treasure locked, treasure sherlocked, sherlock, treasherlocked 3.0, innovision 2015, NIT Rourkela, NIT Rourkela treasure hunt, cryptic hunt, online cryptic hunt, treasure hunt" />
-
-	<link href="<?php echo SSTATIC; ?>css/bootstrap.css" rel="stylesheet" />
-	<link href="<?php echo SSTATIC; ?>css/animate.css" rel="stylesheet" />
-	<link href="<?php echo SSTATIC; ?>css/base.css" rel="stylesheet" />
-	<link href="<?php echo SSTATIC; ?>css/home.css" rel="stylesheet" />
-	<link href="<?php echo SSTATIC; ?>css/queries.css" rel="stylesheet" />
-
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
+  <!-- Title -->
+  <title>Treasherlocked - 5.0</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- favicon -->
+  <link rel="icon" type="image/gif" href="<?php echo SSTATIC; ?>img/ts/favicon.png" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="<?php echo SSTATIC; ?>css/bootstrap.min.css">
+  <!-- styling -->
+  <link rel="stylesheet" type="text/css" href="<?php echo SSTATIC; ?>css/index.css">
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
 </head>
-<body id="top">
-	<div class='popup' id="advert">
-		<div class='cnt223'>
-			<p>
-				 <img src="<?php echo SSTATIC; ?>img/banner.jpg" alt="advert">
-				<br/>
-				<br/>
-				<a href='https://www.printview.in/' target="_blank" id="pop-up-close" class="close">Continue</a>
-			</p>
-		</div>
-	</div>
+<body>
 
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery.cookie.js"></script>
-	<script type='text/javascript'>
-		$(window).load(function(){
-			if(typeof $.cookie('seenadvert')=== 'undefined'){
-				console.log("1");
-				var overlay = $('<div id="overlay"></div>');
-				overlay.show();
-				overlay.appendTo(document.body);
-				$('.popup').show();
-				$('.close').click(function(){
-					$('.popup').hide();
-					overlay.appendTo(document.body).remove();
+  <!-- navbar -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="<?php echo SSTATIC; ?>img/ts/treasherlocked.png" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="<?php echo SSTATIC; ?>img/menu.svg" height="25" width="25" /></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item link">
+            <a class="nav-link" style="color:red;">Home</a>
+          </li>
+          <li class="nav-item link">
+            <a class="nav-link" href="about.php">About</a>
+          </li>
+          <li class="nav-item link">
+            <a class="nav-link" href="howtoplay.php">How to Play</a>
+          </li>
+          <li class="nav-item link">
+            <a class="nav-link" href="rules.php">Rules</a>
+          </li>
+        </ul>
+        <div class="btn-toolbar">
+          <button type="button" class="btn btn-danger">LOGIN</button>
+          <button type="button" class="btn btn-danger">SIGN UP</button>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-				});
-				$.cookie('seenadvert',1, { expires: 100 });
-			}
-		});
-	</script>
-	<?php require( 'includes/html/header.php' ); ?>
+  <!-- header img -->
+  <section class="first">
+    <div class="container">
+      <!-- Nikhil avatar -->
+      <div class="avatar text-center">
+        <img src="<?php echo SSTATIC; ?>img/ts/logo.png" class="img-fluid"/>
+        <p class="hunt">
+          because the hunt is on
+        </p>
+        <hr>
+        <p class="date">
+          27-29 OCTOBER 2017
+        </p>
+        <button type="button" class="btn btn-danger">REGISTER NOW</button>
+      </div>
+    </div>
+  </section>
 
-	<section id="home" class="autoheight">
-		<div class="home-bg"></div>
-		<div class="col-lg-12 landing-text-pos align-center">
-			<img id="logo" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="1s" src="<?php echo SSTATIC; ?>img/logo.png" />
-			<h2 class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="1s">because the hunt is on</h2>
-			<hr id="title_hr" />
-			<p class="wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="1s">28-30 October 2016</p>
-			<?php if($loggedIn && $event_status==EVENT_STARTED){?>
-			<a class="btn-effect wow animated fadeIn" data-wow-duration="0.5s" data-wow-delay="1.5s" data-scroll href="<?php echo SITE_URL . 'play/'; ?>">Play Now</a>
-			<?php } ?>
-			<?php if($loggedIn && $event_status==EVENT_NOT_STARTED){ ?>
-			<a class="btn-effect wow animated fadeIn" data-wow-duration="0.5s" data-wow-delay="1.5s" data-scroll href="<?php echo SITE_URL . 'about.php'; ?>">Learn More</a>
-			<?php }?>
-			<?php if(!$loggedIn){?>
-			<a class="btn-effect wow animated fadeIn" data-wow-duration="0.5s" data-wow-delay="1.5s" data-scroll href="<?php echo SITE_URL . 'signup/'; ?>">Register Now</a>
-			<?php }?>
-		</div>
-	</section>
 
-	<?php /* COUNTDOWN--- */ ?>
-	<section id="countdown" class="text-center section-padding">
-		<div class="container">
-			<div class="row">
-				<input type="hidden" id="serve_time" name="serve_time" value="<?php echo $countdown; ?>" />
-				<?php
-				switch ($event_status) {
-					case EVENT_NOT_STARTED:	{ require( 'includes/html/event/not_started.php' ); break; }
-					case EVENT_STARTED:		{ require( 'includes/html/event/running.php' ); break; }
-					case EVENT_CLOSED:		{ require( 'includes/html/event/closed.php' ); break; }
-				}
-				?>
-			</div>
-		</div>
-	</section>
-	<?php /* ---COUNTDOWN */ ?>
+  <div class="huntend">
+    <p>THE HUNT HAS ENDED</p>
+    <button type="button" class="btn btn-danger">SEE LEADERBOARD</button>
+  </div>
 
-	<?php /*-- HOME ADMIN-- */?>
-	<section id="home-admin">
-		<div class="box">
-			<div class="row ">
- 				<div class="col-md-2 img-home-admin">
- 					<img class="img-responsive img-circle" src="<?php echo SSTATIC; ?>img/admin/acd.jpg" />
- 					<br/>
- 					<p>Admin ACD</p>
- 				</div>
-	   			<div class="col-md-2 img-home-admin">
-	   				<img class="img-responsive img-circle" src="<?php echo SSTATIC; ?>img/admin/sherlock.jpg" />
-	   				<br/>
-	   				<p>Admin Sherlock</p>
-	 			</div>
-				<div class="col-md-2 img-home-admin">
-	 				<img class="img-responsive img-circle" src="<?php echo SSTATIC; ?>img/admin/watson.jpg" />
-	 				<br/>
-	 				<p>Admin Watson</p>
-	 			</div>
-	  			<div class="col-md-2 img-home-admin">
-	   				<img class="img-responsive img-circle" src="<?php echo SSTATIC; ?>img/admin/moriarty.jpg" />
-	   				<br/>
-	   				<p>Admin Moriarty</p>
-	 			</div>
-	  			<div class="col-md-2 img-home-admin">
-	   				<img class="img-responsive img-circle" src="<?php echo SSTATIC; ?>img/admin/mycroft.jpg" />
-	   				<br/>
-	   				<p>Admin Mycroft</p>
-	 			</div>
-			</div>
-		</div>
-	</section>
-	<?php /*-- HOME ADMIN-- */?>
 
-	<?php /* SPONSORS--- */ ?>
-	<section id="sponsors" class="text-center section-padding">
-		<div class="container">
-			<div class="sponsor">
-				<a href="http://www.printview.in/" target="_blank"><img src="<?php echo SSTATIC; ?>img/sponsors/printview.png" /></img></a>
-				<span class="sponsor-font">Title Sponsor</span>
-			</div>
-			<div class="sponsor">
-				<a href="http://www.vedanta.co.in" target="_blank"><img src="<?php echo SSTATIC; ?>img/sponsors/vedanta.png" /></a>
-				<span class="sponsor-font">Gold Sponsor</span>
-			</div>
-			<div class="sponsor">
-				<a href="https://www.facebook.com/ptbn.inter.college.network/?fref=ts" target="_blank"><img src="<?php echo SSTATIC; ?>img/sponsors/ptbn.png" /></a>
-				<span class="sponsor-font">Publicity Partner</span>
-			</div>
-			<div class="sponsor">
-				<a href="http://innovision.nitrkl.ac.in" target="_blank"><img src="<?php echo SSTATIC; ?>img/sponsors/innovision.png" /></a>
-				<span class="sponsor-font">Event Partner</span>
-			</div>
-			<div class="sponsor">
-				<a href="http://mondaymorning.nitrkl.ac.in" target="_blank"><img src="<?php echo SSTATIC; ?>img/sponsors/mm.png" /></a>
-				<span class="sponsor-font">Media Partner</span>
-			</div>
-			<div class="space space-40"></div>
-			<div class="row">
-				<a href="http://www.microsoftcampusclub.in" target="_blank"><img src="<?php echo SSTATIC; ?>img/msclublogo.png" /></a>
-				<p>a <a href="http://www.msclub.nitrkl.ac.in">Microsoft Campus Club</a> event</p>
-			</div>
-		</div>
-	</section>
-	<?php /* ---SPONSORS */ ?>
+<div class="admin">
+  <div class="container">
+    <ul class="nav justify-content-center">
+      <li class="nav-item social">
+        <img src="<?php echo SSTATIC; ?>img/ts/acd.jpg" class="img-fluid rounded" alt="img1"><br />
+        <p class="adminname">Admin ACD</p>
+      </li>
+      <li class="nav-item social">
+        <img src="<?php echo SSTATIC; ?>img/ts/sherlock.jpg" class="img-fluid rounded" alt="img2"/><br />
+        <p class="adminname">Admin Sherlock</p>
 
-	<audio src="<?php echo SSTATIC; ?>music/bg.mp3" loop="true" id="backgroundMusic" autoplay="true"></audio>
+      </li>
+      <li class="nav-item social">
+        <img src="<?php echo SSTATIC; ?>img/ts/watson.jpg" class="img-fluid rounded" alt="img3"><br />
+        <p class="adminname">Admin Watson</p>
 
-	<?php /* FOOTER--- */ ?>
-	<?php require('includes/html/footer.php'); ?>
-	<?php /* ---FOOTER */ ?>
+      </li>
+      <li class="nav-item social">
+        <img src="<?php echo SSTATIC; ?>img/ts/moriarty.jpg" class="img-fluid rounded" alt="img1"><br />
+        <p class="adminname">Admin Moriarty</p>
 
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/main.js" ></script>
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery-ui-1.10.4.min.js"></script>
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/bootstrap.min.js" ></script>
+      </li>
+      <li class="nav-item social">
+        <img src="<?php echo SSTATIC; ?>img/ts/mycroft.jpg" class="img-fluid rounded" alt="img2"/><br />
+        <p class="adminname">Admin Mycroft</p>
 
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/smooth-scroll.js"></script>
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery.nicescroll.js"></script>
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/wow.min.js"></script>
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/init.js"></script>
+      </li>
+    </ul>
+  </div>
+</div>
 
-	<?php if ( $event_status == EVENT_NOT_STARTED || $event_status == EVENT_STARTED ): ?>
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/countdown.js"></script>
-	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/init_countdown.js"></script>
-	<?php endif; ?>
 
-	<?php require( 'includes/html/tracking.php' ); ?>
+<div class="sponsor">
+  <div class="container">
+    <h2>Sponsors</h2>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <img src="<?php echo SSTATIC; ?>img/ts/msclublogo.png" class="img-fluid" alt="msclublogo"/>
+
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div class="footer">
+  <ul class="nav justify-content-center">
+  <li class="nav-item ">
+    <a class="nav-link active foot" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link foot" href="#">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link foot" href="#">Treasherlocked's Facebook</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link foot" href="#">Privacy Policy</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link foot" href="#">Contact Us</a>
+  </li>
+</ul>
+<ul class="nav justify-content-center foot">
+  <li>
+    2013 - 2017 &copy; <a href="http://www.microsoftcampusclub.in/" target="_blank">Microsoft Campus Club</a>
+    <em>(based in <a href="http://nitrkl.ac.in" target="_blank">National Institute of Technology Rourkela</a>)</em>
+  </li>
+</ul>
+</div>
+
+
+
+
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="<?php echo SSTATIC; ?>js/jquery-3.2.1.slim.min.js"></script>
+<script src="<?php echo SSTATIC; ?>js/popper.min.js"></script>
+<script src="<?php echo SSTATIC; ?>js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo SSTATIC; ?>js/index.js"></script>
+
+<!-- InstantClick JS -->
+<script src="<?php echo SSTATIC; ?>js/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script>
+
 </body>
 </html>
