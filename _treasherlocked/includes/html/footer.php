@@ -3,9 +3,9 @@
 			<div class="row">
 				<ul class="navigation">
 					<li><a href="<?php echo SITE_URL; ?>">Home</a></li>
-					<li><a href="<?php echo SITE_URL; ?>about/">About</a></li>
+					<li><a href="<?php echo SITE_URL; ?>about.php">About</a></li>
 					<li><a href="https://www.facebook.com/Treasherlocked" target="_blank">Treasherlocked's Facebook</a></li>
-					<li><a href="<?php echo SITE_URL; ?>privacy/">Privacy Policy</a></li>
+					<li><a href="<?php echo SITE_URL; ?>privacy.php">Privacy Policy</a></li>
 					<li><a href="mailto:msclub.nitr@gmail.com">Contact Us</a></li>
 				</ul>
 				<ul class="legal">

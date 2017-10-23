@@ -17,16 +17,16 @@ $page = NON_NAV;
 	<link href="<?php echo SSTATIC; ?>css/base.css" rel="stylesheet" />
 	<link href="<?php echo SSTATIC; ?>css/game.css" rel="stylesheet" />
 	<link href="<?php echo SSTATIC; ?>css/queries.css" rel="stylesheet" />
-  
+
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-</head>	   
+</head>
 <body id="top">
 
 	<?php require( 'includes/html/header.php' ); ?>
-	
+
 	<section class="page section-padding">
 		<div class="container">
 			<div class="row">
@@ -39,17 +39,17 @@ $page = NON_NAV;
 						<img src="<?php echo SSTATIC; ?>img/finish.png" />
 						<div class="space space-40"></div>
 						<p>You came a long way and you should be proud of it.</p>
-						<a class="btn btn-effect" id="back" href="<?php echo SITE_URL; ?>leaderboard/">See Leaderboard</a>
+						<a class="btn btn-effect" id="back" href="<?php echo SITE_URL; ?>leaderboard.php">See Leaderboard</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-		
-	<!--FOOTER-->	
+
+	<!--FOOTER-->
 	<?php require('includes/html/footer.php'); ?>
 	<!-- /FOOTER -->
-		
+
 	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery-ui-1.10.4.min.js"></script>
 	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/bootstrap.min.js" ></script>

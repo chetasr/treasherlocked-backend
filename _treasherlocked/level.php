@@ -1,42 +1,42 @@
-<?php 
+<?php
 	require( 'config/consts.php' );
 	session_start();
-	
+
 	require_once( DOCUMENT_ROOT . 'classes/LoginHelper.php' );
 	require_once( DOCUMENT_ROOT . 'config/db.php' );
 	require( DOCUMENT_ROOT . 'classes/Treasherlocked.php' );
-		
+
 	/* Check if the user is logged in */
 	$loginHelper = new LoginHelper( $db );
 	if ( !$loginHelper->IsLoggedIn() ) {
 		$continue = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		header( "Location: " . SITE_URL . "login/?continue=$continue" );
+		header( "Location: " . SITE_URL . "login.php?continue=$continue" );
 		exit;
 	}
-	
+
 	// Check if the event has started
 	$ts = new Treasherlocked( $db );		// Treasherlocked is the boss
 	/*if ( $ts->getEventStatus() == EVENT_NOT_STARTED ) {
 		header( 'Location: ' . SITE_URL );
 		exit;
 	}*/
-	
+
 	$curLevel = $ts->getCurrentLevel();		// Current levels of the user
-	
-	if ( isset( $_GET['level'] ) 
+
+	if ( isset( $_GET['level'] )
 		&& $_GET['level'] <= $curLevel
 	) {
 		$reqLevel = $db->escape( $_GET['level'] );			// Requested level
-		
+
 		if ( is_numeric( $_GET['level'] ) ) {
-		
+
 			// Check if the level has an URL mask. If it has an URL mask, it should appear instead of level number
 			$url_mask = $ts->getURLMask( $reqLevel );
 			if ( $url_mask ) {
 				header( 'Location: ' . SITE_URL . 'level/' . $url_mask . '/' );
 				exit;
 			}
-			
+
 			if ( $reqLevel == 0 && $curLevel == 0 ) {
 				// Only Faceook users will be forced to like pages
 				if ( $_SESSION['oauth_type'] == OAUTH_FACEBOOK ) {
@@ -51,38 +51,38 @@
 				header( 'Location: ' . SITE_URL . 'level/' . $curLevel . '/' );
 				exit;
 			}
-			
+
 		} else {	// URL mask probably
-		
+
 			if ( $levelID = $ts->getLevel( $reqLevel ) ) {
 				$reqLevel = $levelID;
 			} else {	//Random strng
 				header( 'Location: ' . SITE_URL . 'level/' . $curLevel . '/' );
 				exit;
 			}
-			
+
 		}
 	} else {
-		
+
 		if ( $curLevel > NO_OF_LEVELS )
 			require( DOCUMENT_ROOT . 'includes/html/event/finished.php' );
 		else
 			header( 'Location: ' . SITE_URL . 'level/' . $curLevel . '/' );
-		
+
 		exit;
 	}
 
 	require( 'classes/Event.php' );
 	$event = new Event();
 	$event_status = $event->get_event_status();
-	
+
 	// TBD: Check DIVERGENCE && CONVERGENCE
-	
+
 	// Load questions
 	$question = $ts->getQuestion( $reqLevel );
 	$explanation = $ts->getExplanation($reqLevel);
 	$favicon = ( isset( $question['favicon'] ) ) ? $question['favicon']: false;
-	
+
 	/*	Begin Page Rendering */
 	$page = NON_NAV;
 ?>
@@ -91,7 +91,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	
+
 	<?php if ( $favicon ) :?>
 	<link rel="shortcut icon" href="<?php echo SSTATIC . 'img/questions/' . $favicon; ?>" type="image/png">
 	<link rel="icon" href="<?php echo SSTATIC . 'img/questions/' . $favicon; ?>" type="image/png">
@@ -107,16 +107,16 @@
 	<link href="<?php echo SSTATIC; ?>css/base.css" rel="stylesheet" />
 	<link href="<?php echo SSTATIC; ?>css/game.css" rel="stylesheet" />
 	<link href="<?php echo SSTATIC; ?>css/queries.css" rel="stylesheet" />
-  
+
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-</head>	   
+</head>
 <body id="top">
 
 	<?php require( 'includes/html/header.php' ); ?>
-	
+
 	<section class="page section-padding">
 		<div class="container">
 			<div class="row">
@@ -150,7 +150,7 @@
 					</div>
 				</div>
 				<div class="space space-20"></div>
-				
+
 				<?php if ( $reqLevel == $curLevel ) : ?>
 				<div class="row box answer-box" id="answer-box">
 					<div class="row">
@@ -188,11 +188,11 @@
 			</div>
 		</div>
 	</section>
-		
-	<!--FOOTER-->	
+
+	<!--FOOTER-->
 	<?php require('includes/html/footer.php'); ?>
 	<!-- /FOOTER -->
-		
+
 	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery-ui-1.10.4.min.js"></script>
 	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/bootstrap.min.js" ></script>
