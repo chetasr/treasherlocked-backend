@@ -142,9 +142,5 @@
     <script src="<?php echo SSTATIC; ?>js/bootstrap.min.js"></script>
 
 
-    <!-- InstantClick JS -->
-    <script src="<?php echo SSTATIC; ?>js/instantclick.min.js" data-no-instant></script>
-    <script data-no-instant>InstantClick.init();</script>
-
   </body>
   </html>
