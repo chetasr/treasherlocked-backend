@@ -97,7 +97,7 @@
         <div class="footer">
           <ul class="nav justify-content-center">
             <li class="nav-item ">
-              <a class="nav-link active foot" href="#">Home</a>
+              <a class="nav-link active foot" href="index.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link foot" href="#">About</a>

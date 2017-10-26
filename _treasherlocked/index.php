@@ -153,7 +153,7 @@
     <a class="nav-link active foot" href="#">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link foot" href="#">About</a>
+    <a class="nav-link foot" href="about.php">About</a>
   </li>
   <li class="nav-item">
     <a class="nav-link foot" href="#">Treasherlocked's Facebook</a>
