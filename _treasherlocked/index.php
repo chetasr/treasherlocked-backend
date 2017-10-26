@@ -94,12 +94,10 @@
     </div>
   </section>
 
-
   <div class="huntend">
     <p>THE HUNT HAS ENDED</p>
     <button type="button" class="btn btn-danger">SEE LEADERBOARD</button>
   </div>
-
 
 <div class="admin">
   <div class="container">
@@ -132,7 +130,6 @@
   </div>
 </div>
 
-
 <div class="sponsor">
   <div class="container">
     <h2>Sponsors</h2>
@@ -144,8 +141,6 @@
     </ul>
   </div>
 </div>
-
-
 
 <div class="footer">
   <ul class="nav justify-content-center">
@@ -172,12 +167,6 @@
   </li>
 </ul>
 </div>
-
-
-
-
-
-
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="<?php echo SSTATIC; ?>js/jquery-3.2.1.slim.min.js"></script>

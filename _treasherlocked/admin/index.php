@@ -1,21 +1,21 @@
-<?php 
-	require('../config/consts.php'); 
+<?php
+	require('../config/consts.php');
 	$page = NON_NAV;
-	
+
 	session_start();
-	
+
 	if ( $_SERVER['REQUEST_METHOD'] == 'POST' && !isset( $_SESSION['admin_logged_in'] ) ) {
-		
-		if ( $_POST['password'] == 'neverbackdown!@#' )
+
+		if ( $_POST['password'] == 'x' )
 			$_SESSION['admin_logged_in'] = true;
 	}
-	
+
 	if ( isset( $_GET['logout'] ) ) {
 		unset( $_SESSION['admin_logged_in'] );
 		header( 'Location: admin/' );
 		exit;
 	}
-	
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,7 @@
 	<link rel="icon" href="<?php echo SSTATIC; ?>favicon.png" type="image/png">
 
 	<title>Admin Login</title>
-	
+
 	<meta name="description" content="Treasherlocked 2.0 is the second installment to a three-day online cryptic treasure hunt organized by Microsoft Campus Club of NIT Rourkela. The second installment will be held between 7th November and 9th November, 2014." />
 	<meta name="keywords"  content="treasherlocked, innovision 2014, NIT Rourkela, NIT Rourkela treasure hunt, cryptic hunt, online cryptic hunt, treasure hunt" />
 
@@ -36,16 +36,16 @@
 	<link href="<?php echo SSTATIC; ?>css/base.css" rel="stylesheet" />
 	<link href="<?php echo SSTATIC; ?>css/social.css" rel="stylesheet" />
 	<link href="<?php echo SSTATIC; ?>css/queries.css" rel="stylesheet" />
-  
+
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-</head>	   
+</head>
 <body id="top">
 
 	<?php require( DOCUMENT_ROOT . 'includes/html/header.php' ); ?>
-	
+
 	<section class="page section-padding">
 		<div class="container">
 			<div class="row">
@@ -77,11 +77,11 @@
 			</div>
 		</div>
 	</section>
-		
-	<!--FOOTER-->	
+
+	<!--FOOTER-->
 	<?php require( DOCUMENT_ROOT . 'includes/html/footer.php' ); ?>
 	<!-- /FOOTER -->
-		
+
 	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/jquery-ui-1.10.4.min.js"></script>
 	<script type="text/javascript" src="<?php echo SSTATIC; ?>js/bootstrap.min.js" ></script>
@@ -94,7 +94,7 @@
 			$( '#submit' ).click( function() { $( '#login' ).submit(); });
 		});
 	</script>
-	
+
 	<?php require( DOCUMENT_ROOT . 'includes/html/tracking.php' ); ?>
 </body>
 </html>
